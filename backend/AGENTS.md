@@ -20,6 +20,9 @@ Organize all code by **business domain slice first**, then strictly into three s
   - Never create top-level technical packages (`controllers/`, `services/`, `repositories/`, `dtos/`, `mappers/`).
   - Never create `*Impl` interfaces for single-implementation `control` classes.
   - Never create `PanacheRepository` classes—either use Active Record methods on `PanacheEntity` inside `entity` or inject `EntityManager` directly inside `control`.
+- **OpenAPI 3.1 / MP OpenAPI 4.0 Standards:**
+  - When annotating payload entities with `@Schema`, **always** use `examples = "..."` (or `examples = {"..."}`).
+  - Never use the deprecated `example = "..."` attribute (deprecated since MP OpenAPI 4.0 / OpenAPI 3.1 JSON Schema alignment).
 
 ## 3. Quarkus & Jakarta EE Standards
 
