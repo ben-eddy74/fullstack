@@ -112,7 +112,7 @@
         <version>${surefire-plugin.version}</version>
         <configuration>
           <!-- Enable Java 25 Compact Object Headers (JEP 519) & module access for thread resets -->
-          <argLine>-XX:+UseCompactObjectHeaders --add-opens=java.base/java.lang.invoke=ALL-UNNAMED</argLine>          
+          <argLine>-XX:+UseCompactObjectHeaders --add-opens=java.base/java.lang.invoke=ALL-UNNAMED @{argLine}</argLine>          
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
