@@ -20,8 +20,13 @@
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.version>3.40.1</quarkus.platform.version>
+
+    <!-- Non-BOM Third-Party Dependencies -->
     <archunit.version>1.4.0</archunit.version>
+    
+    <!-- Maven Build & Test Plugins -->    
     <surefire-plugin.version>3.5.2</surefire-plugin.version>
+    <compiler-plugin.version>3.14.0</compiler-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -100,7 +105,7 @@
 
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.14.0</version>
+        <version>${compiler-plugin.version}</version>
         <configuration>
           <release>${maven.compiler.release}</release>
           <parameters>${maven.compiler.parameters}</parameters>
