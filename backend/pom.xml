@@ -111,8 +111,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire-plugin.version}</version>
         <configuration>
-          <!-- Enable Java 25 Compact Object Headers (JEP 519) & Quarkus Logging -->
-          <argLine>-XX:+UseCompactObjectHeaders</argLine>
+          <!-- Enable Java 25 Compact Object Headers (JEP 519) & module access for thread resets -->
+          <argLine>-XX:+UseCompactObjectHeaders --add-opens=java.base/java.lang.invoke=ALL-UNNAMED</argLine>          
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
