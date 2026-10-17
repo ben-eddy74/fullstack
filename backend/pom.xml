@@ -23,6 +23,7 @@
 
     <!-- Non-BOM Third-Party Dependencies -->
     <archunit.version>1.4.0</archunit.version>
+    <versions-maven-plugin.version>2.23.0</versions-maven-plugin.version>
     
     <!-- Maven Build & Test Plugins -->    
     <surefire-plugin.version>3.5.2</surefire-plugin.version>
@@ -122,6 +123,16 @@
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>${versions-maven-plugin.version}</version>
+        <configuration>
+          <!-- Prevent jumping into major version betas -->
+          <allowMajorUpdates>false</allowMajorUpdates>
         </configuration>
       </plugin>
     </plugins>
