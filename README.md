@@ -90,6 +90,7 @@ Open `http://localhost:5173` to view the Lit application communicating with the 
 - `mvn quarkus:dev`: Start live coding with hot reload and continuous testing.
 - `mvn test`: Execute JUnit tests and ArchUnit architectural checks (`BceArchitectureTest`).
 - `mvn package`: Compile, test, and run Quarkus augmentation to export `target/generated/openapi/openapi.yaml`.
+- `mvn versions:display-property-updates`: Check updates for properties.
 
 ### Frontend (`frontend/`)
 - `npm run dev`: Start Vite dev server on port 5173 with proxying to backend.
