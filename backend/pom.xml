@@ -19,7 +19,7 @@
     <!-- Quarkus & Tooling Versions -->
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
-    <quarkus.platform.version>3.27.6</quarkus.platform.version>
+    <quarkus.platform.version>3.40.1</quarkus.platform.version>
     <archunit.version>1.4.0</archunit.version>
     <surefire-plugin.version>3.5.2</surefire-plugin.version>
   </properties>
